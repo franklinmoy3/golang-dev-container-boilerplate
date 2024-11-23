@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.23-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"installOhMyZsh": true,
+			"installOhMyZshConfig": true,
+			"upgradePackages": true,
+			"username": "vscode",
+			"userUid": "1001",
+			"userGid": "1001"
+		}
+	},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "github.vscode-github-actions",
+        "golang.go",
+        "ms-vscode.makefile-tools",
+        "postman.postman-for-vscode",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root",
+  "containerUser": "vscode",
+  "containerEnv": {
+    "HOME": "/home/vscode"
+  }
+}
